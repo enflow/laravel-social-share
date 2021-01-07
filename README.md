@@ -1,7 +1,7 @@
 # Easily add social share links
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/enflow/laravel-social-share.svg?style=flat-square)](https://packagist.org/packages/enflow/laravel-social-share)
-![GitHub Workflow Status](https://github.com/enflow-nl/laravel-social-share/workflows/run-tests/badge.svg)
+![GitHub Workflow Status](https://github.com/enflow/laravel-social-share/workflows/run-tests/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/enflow/laravel-social-share.svg?style=flat-square)](https://packagist.org/packages/enflow/laravel-social-share)
 
 The `enflow/laravel-social-share` package provides an easy way to add social share links to your templates:
