@@ -1,0 +1,42 @@
+.social-share {
+    --size: 30px;
+    --space: .15rem;
+    --border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    margin: 0 calc(var(--space) * -1);
+}
+
+.social-share.social-share--size-large {
+    --size: 40px;
+}
+
+.social-share.social-share--style-square {
+    --border-radius: 0;
+}
+
+.social-share.social-share--style-circle {
+    --border-radius: 50%;
+}
+
+.social-share .social-share-service {
+    --color: #000;
+
+    margin: 0 var(--space);
+    transition: .15s ease-in-out transform;
+    will-change: transform;
+    background: var(--color);
+    color: #fff;
+    padding: 5px;
+}
+
+.social-share .social-share-service:hover {
+    transform: translateY(-3px);
+}
+
+.social-share .social-share-service svg {
+    width: calc(var(--size) - 5px - 5px);
+    height: calc(var(--size) - 5px - 5px);
+    border-radius: var(--border-radius);
+}
