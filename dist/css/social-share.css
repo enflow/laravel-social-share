@@ -1,7 +1,7 @@
 .social-share {
     --size: 30px;
     --space: .15rem;
-    --border-radius: 4px;
+    --border-radius: 3px;
 
     display: flex;
     align-items: center;
@@ -28,7 +28,9 @@
     will-change: transform;
     background: var(--color);
     color: #fff;
-    padding: 5px;
+    padding: 7px;
+    display: flex;
+    border-radius: var(--border-radius);
 }
 
 .social-share .social-share-service:hover {
@@ -36,7 +38,6 @@
 }
 
 .social-share .social-share-service svg {
-    width: calc(var(--size) - 5px - 5px);
-    height: calc(var(--size) - 5px - 5px);
-    border-radius: var(--border-radius);
+    width: calc(var(--size) - 7px - 7px);
+    height: calc(var(--size) - 7px - 7px);
 }
