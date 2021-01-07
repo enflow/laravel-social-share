@@ -4,11 +4,11 @@
 ![GitHub Workflow Status](https://github.com/enflow-nl/laravel-social-share/workflows/run-tests/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/enflow/laravel-social-share.svg?style=flat-square)](https://packagist.org/packages/enflow/laravel-social-share)
 
-The `enflow/laravel-social-share` package provides a easy way to add social share links to your templates:
+The `enflow/laravel-social-share` package provides an easy way to add social share links to your templates:
 
 ![docs/img.png](docs/example.png)
 
-The main advantage of implementing it this way instead of using a service like AddThis, is this doesn't use any JavaScript, and does not have any privacy concerns.
+The main advantage of implementing it this way instead of using a service like AddThis, is this doesn't use any JavaScript and does not have any privacy concerns.
 
 ## Installation
 You can install the package via composer:
@@ -24,21 +24,21 @@ The package will auto-register. You may add the `SocialShareFacade` to your `app
 ```
 
 ### CSS
-This package includes a CSS file for deafult styling. You may copy this file to your own CSS structure and modify it, or import it in your app.css / app.scss file to use the default variant.
-The advantage of including it is that it will be automatically updated if changed are made in upcoming versions.
+This package includes a CSS file for deafult styling. You can copy this file to your own CSS structure and modify it, or import it in your app.css / app.scss file to use the default variant.
+The advantage of including it is that it will be automatically updated if changes are made in upcoming versions.
 
 ```css
 @import "../../vendor/enflow/laravel-social-share/dist/css/social-share.css";
 ```
 
 ## Usage
-You can use the Facade in your templates as following:
+You can use the Facade in your templates as follows:
 
 ```blade
 {{ SocialShare::facebook()->twitter()->linkedin()->whatsapp()->render() }}
 ```
 
-You may chain multiple services next to each other. The following services are supported currently. Pull requests are welcome to extend this.
+You can chain multiple services next to each other. The following services are currently supported. Pull requests are welcome to expand this.
 
 - Facebook
 - Twitter
@@ -49,7 +49,7 @@ You may chain multiple services next to each other. The following services are s
 - Telegram
 - Email
 
-You can increase the size or set styling options as followed:
+You can increase the size or set styling options as follows:
 
 ```
 {{ SocialShare::facebook()->square()->render() }} // Style: square
@@ -65,7 +65,7 @@ You may want to pass along text to the different sharing options. This text will
 {{ SocialShare::facebook()->text($page->title)->render() }}
 ```
 
-You may combine all options:
+You can combine all options:
 
 ```blade
 {{ SocialShare::facebook()->twitter()->reddit()->square()->large()->text('Lorem ipsum!')->render() }}
@@ -73,7 +73,7 @@ You may combine all options:
 
 ## Config
 
-You may publish the config to tweak the services and their colors.
+You can publish the config to tweak the services and their colors.
 
 Pushing the config file:
 ``` bash
