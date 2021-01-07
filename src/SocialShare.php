@@ -12,6 +12,7 @@ class SocialShare implements Renderable
     public string $size = 'normal';
     public string $style = 'rounded';
     public ?string $text = null;
+    public ?string $class = null;
 
     public function __construct()
     {
@@ -28,6 +29,13 @@ class SocialShare implements Renderable
     public function text(?string $text): self
     {
         $this->text = $text;
+
+        return $this;
+    }
+
+    public function class(?string $class): self
+    {
+        $this->class = $class;
 
         return $this;
     }
@@ -71,6 +79,7 @@ class SocialShare implements Renderable
     {
         return new HtmlString(view('social-share::social-share', [
             'services' => $this->services,
+            'class' => $this->class,
             'size' => $this->size,
             'style' => $this->style,
         ])->render());

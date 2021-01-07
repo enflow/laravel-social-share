@@ -35,6 +35,14 @@ class SocialShareTest extends TestCase
         $this->assertMatchesXmlSnapshot($socialShare->render()->toHtml());
     }
 
+    public function that_that_a_wrapper_class_can_be_added()
+    {
+        $socialShare = (new SocialShare())->class('mt-2 mb-4');
+
+        $this->assertEquals('mt-2 mb-4', $socialShare->class);
+        $this->assertMatchesXmlSnapshot($socialShare->render()->toHtml());
+    }
+
     public function test_size_modifiers()
     {
         $socialShare = (new SocialShare())->large()->circle();
