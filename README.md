@@ -6,7 +6,7 @@
 
 The `enflow/laravel-social-share` package provides an easy way to add social share links to your templates:
 
-![docs/img.png](docs/example.png)
+![Example](docs/example.png | width=275)
 
 The main advantage of implementing it this way instead of using a service like AddThis, is this doesn't use any JavaScript and does not have any privacy concerns.
 
