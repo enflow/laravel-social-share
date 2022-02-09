@@ -2,8 +2,9 @@
 
 namespace Enflow\SocialShare\Test;
 
-use Orchestra\Testbench\TestCase as TestbenchTestCase;
+use Enflow\SocialShare\SocialShareServiceProvider;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithContainer;
+use Orchestra\Testbench\TestCase as TestbenchTestCase;
 
 abstract class TestCase extends TestbenchTestCase
 {
@@ -12,7 +13,7 @@ abstract class TestCase extends TestbenchTestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Enflow\SocialShare\SocialShareServiceProvider::class,
+            SocialShareServiceProvider::class,
         ];
     }
 }

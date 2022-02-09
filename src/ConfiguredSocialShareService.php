@@ -4,21 +4,15 @@ namespace Enflow\SocialShare;
 
 class ConfiguredSocialShareService
 {
-    public SocialShare $socialShare;
-    public string $name;
-    public array $parameters = [];
     public string $url;
     public string $color;
 
-    public function __construct(SocialShare $socialShare, string $name, array $parameters = [])
+    public function __construct(public SocialShare $socialShare, public string $name, public array $parameters = [])
     {
         if (! array_key_exists($name, config('social-share.services'))) {
             throw Exceptions\UnknownService::create($name);
         }
 
-        $this->socialShare = $socialShare;
-        $this->name = $name;
-        $this->parameters = $parameters;
         $this->url = config('social-share.services.' . $this->name . '.url');
         $this->color = config('social-share.services.' . $this->name . '.color');
     }

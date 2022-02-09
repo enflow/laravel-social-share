@@ -5,8 +5,6 @@ namespace Enflow\SocialShare\Test;
 use Enflow\SocialShare\ConfiguredSocialShareService;
 use Enflow\SocialShare\Exceptions\UnknownService;
 use Enflow\SocialShare\SocialShare;
-use Illuminate\Http\Request;
-use Mockery;
 use Spatie\Snapshots\MatchesSnapshots;
 
 class SocialShareTest extends TestCase
