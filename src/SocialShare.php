@@ -9,9 +9,13 @@ use Illuminate\Support\HtmlString;
 class SocialShare implements Renderable
 {
     public Collection $services;
+
     public string $size = 'normal';
+
     public string $style = 'rounded';
+
     public ?string $text = null;
+
     public ?string $class = null;
 
     public function __construct()
