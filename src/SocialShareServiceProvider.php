@@ -15,23 +15,23 @@ class SocialShareServiceProvider extends ServiceProvider
 
     private function registerConfig(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/social-share.php', 'social-share');
+        $this->mergeConfigFrom(__DIR__.'/../config/social-share.php', 'social-share');
     }
 
     private function registerViews(): void
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'social-share');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'social-share');
     }
 
     private function registerPublishables(): self
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/social-share.php' => config_path('social-share.php'),
+                __DIR__.'/../config/social-share.php' => config_path('social-share.php'),
             ], 'config');
 
             $this->publishes([
-                __DIR__ . '/../resources/views' => base_path('resources/views/vendor/social-share'),
+                __DIR__.'/../resources/views' => base_path('resources/views/vendor/social-share'),
             ], 'views');
         }
 
