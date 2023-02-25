@@ -10,7 +10,7 @@ abstract class TestCase extends TestbenchTestCase
 {
     use InteractsWithContainer;
 
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [
             SocialShareServiceProvider::class,
