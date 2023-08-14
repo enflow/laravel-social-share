@@ -14,6 +14,7 @@ class ConfiguredSocialShareService
             throw Exceptions\UnknownService::create($name);
         }
 
+        $this->name = config('social-share.services.'.$this->name.'.name', $name);
         $this->url = config('social-share.services.'.$this->name.'.url');
         $this->color = config('social-share.services.'.$this->name.'.color');
     }

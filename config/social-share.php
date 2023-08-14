@@ -6,9 +6,15 @@ return [
             'url' => 'https://www.facebook.com/sharer/sharer.php?u=#url#&text=#text#',
             'color' => '#1777f2',
         ],
+        // @DEPRECATED. Is replaced with `x`. The values of `x` are the same.
         'twitter' => [
-            'url' => 'https://twitter.com/intent/tweet?url=#url#',
-            'color' => '#1da1f2',
+            'name' => 'x',
+            'url' => 'https://x.com/intent/tweet?url=#url#',
+            'color' => '#000000',
+        ],
+        'x' => [
+            'url' => 'https://x.com/intent/tweet?url=#url#', // @TODO: replace with actual URL if `tweet` get's renamed.
+            'color' => '#000000',
         ],
         'linkedin' => [
             'url' => 'https://www.linkedin.com/sharing/share-offsite/?url=#url#&summary=#text#',

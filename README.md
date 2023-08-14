@@ -35,19 +35,20 @@ The advantage of including it is that it will be automatically updated if change
 You can use the Facade in your templates as follows:
 
 ```blade
-{{ SocialShare::facebook()->twitter()->linkedin()->whatsapp()->render() }}
+{{ SocialShare::facebook()->x()->linkedin()->whatsapp()->render() }}
 ```
 
 You can chain multiple services next to each other. The following services are currently supported. Pull requests are welcome to expand this.
 
 - Facebook
-- Twitter
+- X _(previously Twitter)_
 - LinkedIn
 - WhatsApp
 - Pinterest
 - Reddit
 - Telegram
 - Email
+- Twitter _(deprecated)_ - automatically replaced with `x`
 
 You can increase the size or set styling options as follows:
 
@@ -68,7 +69,7 @@ You may want to pass along text to the different sharing options. This text will
 You can combine all options:
 
 ```blade
-{{ SocialShare::facebook()->twitter()->reddit()->square()->large()->text('Lorem ipsum!')->render() }}
+{{ SocialShare::facebook()->x()->reddit()->square()->large()->text('Lorem ipsum!')->render() }}
 ```
 
 ## Config
