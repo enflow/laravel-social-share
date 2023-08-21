@@ -4,6 +4,8 @@ namespace Enflow\SocialShare;
 
 class ConfiguredSocialShareService
 {
+    public string $label;
+
     public string $url;
 
     public string $color;
@@ -15,6 +17,7 @@ class ConfiguredSocialShareService
         }
 
         $this->name = config('social-share.services.'.$this->name.'.name', $name);
+        $this->label = config('social-share.services.'.$this->name.'.label');
         $this->url = config('social-share.services.'.$this->name.'.url');
         $this->color = config('social-share.services.'.$this->name.'.color');
     }
