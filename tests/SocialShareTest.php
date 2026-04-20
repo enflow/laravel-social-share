@@ -13,12 +13,12 @@ class SocialShareTest extends TestCase
 
     public function test_that_social_share_is_empty_by_default()
     {
-        $this->assertEmpty((new SocialShare())->services);
+        $this->assertEmpty((new SocialShare)->services);
     }
 
     public function test_that_service_is_added()
     {
-        $socialShare = (new SocialShare())->facebook();
+        $socialShare = (new SocialShare)->facebook();
 
         $this->assertCount(1, $socialShare->services);
 
@@ -28,14 +28,14 @@ class SocialShareTest extends TestCase
 
     public function test_that_service_is_rendered()
     {
-        $socialShare = (new SocialShare())->facebook();
+        $socialShare = (new SocialShare)->facebook();
 
         $this->assertMatchesXmlSnapshot($socialShare->render()->toHtml());
     }
 
     public function that_that_a_wrapper_class_can_be_added()
     {
-        $socialShare = (new SocialShare())->class('mt-2 mb-4');
+        $socialShare = (new SocialShare)->class('mt-2 mb-4');
 
         $this->assertEquals('mt-2 mb-4', $socialShare->class);
         $this->assertMatchesXmlSnapshot($socialShare->render()->toHtml());
@@ -43,7 +43,7 @@ class SocialShareTest extends TestCase
 
     public function test_size_modifiers()
     {
-        $socialShare = (new SocialShare())->large()->circle();
+        $socialShare = (new SocialShare)->large()->circle();
 
         $this->assertEquals('large', $socialShare->size);
         $this->assertEquals('circle', $socialShare->style);
@@ -51,14 +51,14 @@ class SocialShareTest extends TestCase
 
     public function test_url_replacement_with_just_a_url()
     {
-        $service = new ConfiguredSocialShareService(new SocialShare(), 'whatsapp');
+        $service = new ConfiguredSocialShareService(new SocialShare, 'whatsapp');
 
         $this->assertEquals('https://wa.me/?text=http%3A%2F%2Flocalhost', $service->url());
     }
 
     public function test_url_replacement_with_text_and_url()
     {
-        $service = new ConfiguredSocialShareService((new SocialShare())->text('Text to append!'), 'whatsapp');
+        $service = new ConfiguredSocialShareService((new SocialShare)->text('Text to append!'), 'whatsapp');
 
         $this->assertEquals('https://wa.me/?text=Text+to+append%21+-+http%3A%2F%2Flocalhost', $service->url());
     }
@@ -68,6 +68,6 @@ class SocialShareTest extends TestCase
         $this->expectException(UnknownService::class);
         $this->expectExceptionMessage("Service 'googlePlus' is not defined in the services config.");
 
-        (new SocialShare())->googlePlus();
+        (new SocialShare)->googlePlus();
     }
 }
